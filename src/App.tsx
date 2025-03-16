@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Center,
   ChakraProvider,
@@ -12,21 +13,11 @@ import ButtonComponent from "./components/Button/Button";
 import { Card } from "./components/Card";
 
 function App() {
+  const [value, setValue] = useState(0);
   return (
     <ChakraProvider>
       <Header />
-      <Box minHeight="100vh" backgroundColor="#9413dc" padding="25px">
-        <Box backgroundColor="#FFFFFF" borderRadius="25px" padding="15px">
-          <Center>
-            <Text fontSize="2xl" paddingBottom="10px" fontWeight="bold">
-              Faça o login
-            </Text>
-          </Center>
-          <Card/>
-          <Center></Center>
-          <ButtonComponent onClick={login} label="Entrar" />
-        </Box>
-      </Box>
+      <Card />
     </ChakraProvider>
   );
 }

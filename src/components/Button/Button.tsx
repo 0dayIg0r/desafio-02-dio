@@ -1,6 +1,7 @@
 import { Button } from "@chakra-ui/react";
+import { MouseEventHandler } from "react";
 
-function ButtonComponent({ onClick, label }: { onClick: () => void, label: string }) {
+function ButtonComponent({ onClick, label }: { onClick: MouseEventHandler, label: string }) {
   return (
     <Button
       colorScheme="teal"
